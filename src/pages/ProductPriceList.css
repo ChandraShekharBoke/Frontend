@@ -1,0 +1,101 @@
+.price-section {
+  padding: 5rem 1.5rem;
+  background: #FAFAF7;
+}
+
+.price-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.price-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.section-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F9A825;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.price-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 12px 0;
+}
+
+.price-header p {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+/* Table Styling */
+.price-table-wrapper {
+  overflow-x: auto;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.price-table th,
+.price-table td {
+  padding: 18px 24px;
+  text-align: left;
+  border-bottom: 1px solid #E5E7EB;
+  font-size: 15px;
+}
+
+.price-table th {
+  background: #F9FAFB;
+  font-weight: 600;
+  color: #1F2937;
+  font-family: 'Poppins', sans-serif;
+}
+
+.price-table tr:hover {
+  background: #FAFAF7;
+}
+
+.price-cell {
+  font-weight: 600;
+  color: #2E7D32;
+}
+
+/* Button */
+.quote-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #2E7D32;
+  color: #FFFFFF;
+  border-radius: 50px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.quote-btn:hover {
+  background: #1B5E20;
+  transform: translateY(-2px);
+}
+
+/* Note */
+.price-note {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 14px;
+  color: #6B7280;
+}

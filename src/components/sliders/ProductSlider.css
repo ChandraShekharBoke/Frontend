@@ -1,0 +1,151 @@
+/* ================================
+   PRODUCT SECTION
+================================ */
+.product-section {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(
+    to bottom,
+    #FAFAF7 0%,
+    #FFFFFF 100%
+  );
+}
+
+.product-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ================================
+   HEADER
+================================ */
+.product-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #F9A825;
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.product-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 18px;
+}
+
+.product-header p {
+  font-size: 18px;
+  color: #6B7280;
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ================================
+   SWIPER
+================================ */
+.swiper {
+  padding-bottom: 3.5rem;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+/* ================================
+   NAVIGATION (PREMIUM STYLE)
+================================ */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  color: #2E7D32;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #2E7D32;
+  color: #FFFFFF;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ================================
+   PAGINATION
+================================ */
+.swiper-pagination-bullet {
+  background: #2E7D32;
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #F9A825;
+}
+
+/* ================================
+   FOOTER CTA
+================================ */
+.product-footer {
+  margin-top: 2.5rem;
+}
+
+.btn-outline-products {
+  border: 2px solid #2E7D32;
+  color: #2E7D32;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-outline-products:hover {
+  background: #2E7D32;
+  color: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(46,125,50,0.25);
+  transform: translateY(-2px);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1200px) {
+  .product-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    padding: 4.5rem 1rem;
+  }
+
+  .product-header h2 {
+    font-size: 28px;
+  }
+
+  .product-header p {
+    font-size: 16px;
+  }
+}
