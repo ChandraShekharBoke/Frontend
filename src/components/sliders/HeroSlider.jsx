@@ -2,8 +2,8 @@ import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { NavLink } from "react-router-dom";
 
-import banner1 from "../../assets/banner1.png";
-import banner2 from "../../assets/banner2.png";
+import banners1 from "../../assets/banners1.png";
+import banners2 from "../../assets/banners2.png";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,7 +13,7 @@ import "./HeroSlider.css";
 const slides = [
   {
     id: 1,
-    image: banner1,
+    image: banners1,
     label: "Leading Manufacturer & Exporter",
     title: "Premium Natural Fruit & Vegetable Powders",
     description:
@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 2,
-    image: banner2,
+    image: banners2,
     label: "Global Supply Excellence",
     title: "Consistent Quality. International Standards.",
     description:
