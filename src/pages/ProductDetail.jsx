@@ -1,30 +1,27 @@
-import { useParams, NavLink } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import "./ProductDetail.css";
 
 const ProductDetail = () => {
-  const { id } = useParams();
+  const location = useLocation();
+  const product = location.state?.product;
 
-  // In real app, fetch from API or props
-  const product = {
-    id: id || 1,
-    name: "Mango Powder",
-    category: "Fruit Powders",
-    description:
-      "Premium spray-dried mango powder made from naturally ripened Alphonso mangoes. Retains rich flavor, color, and nutritional value. Ideal for beverages, desserts, and nutraceuticals.",
-    image: "/assets/mango-powder.png",
-    features: [
-      "100% Natural – No additives or preservatives",
-      "High nutritional retention",
-      "Long shelf life & excellent solubility",
-      "Suitable for export markets",
-    ],
-    specifications: {
-      "Shelf Life": "18 months",
-      "Moisture": "≤ 5%",
-      "Mesh Size": "40–60 mesh",
-      "Packaging": "25 kg HDPE bags / Custom",
-    },
-  };
+  if (!product) {
+    return (
+      <div className="product-detail-section">
+        <h2>Product not found</h2>
+        <NavLink to="/products">Back to Products</NavLink>
+      </div>
+    );
+  }
+
+  const benefits = product.benefits || [
+    "Rich in natural antioxidants",
+    "Boosts immune system",
+    "Supports digestive health",
+    "100% natural & preservative free",
+    "No added sugar or chemicals",
+    "Plant-based & vegan friendly",
+  ];
 
   return (
     <section className="product-detail-section">
@@ -33,13 +30,13 @@ const ProductDetail = () => {
         {/* Breadcrumb */}
         <nav className="breadcrumb">
           <NavLink to="/products">Products</NavLink>
-          <span>/</span>
+          <span> / </span>
           <span>{product.name}</span>
         </nav>
 
         <div className="product-detail-grid">
 
-          {/* Image */}
+          {/* Product Image */}
           <div className="product-image-container">
             <img
               src={product.image}
@@ -48,41 +45,59 @@ const ProductDetail = () => {
             />
           </div>
 
-          {/* Content */}
+          {/* Product Content */}
           <div className="product-detail-content">
-
-            <span className="product-category">{product.category}</span>
 
             <h1 className="product-detail-title">{product.name}</h1>
 
-            <p className="product-detail-description">
-              {product.description}
-            </p>
+            <p className="product-detail-description">{product.details}</p>
 
-            {/* Features */}
-            <div className="product-features">
-              <h3>Key Features</h3>
-              <ul>
-                {product.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </div>
+            {/* Price & Benefits Side by Side */}
+            <div className="price-benefits-row">
 
-            {/* Specifications */}
-            <div className="product-specifications">
-              <h3>Specifications</h3>
-              <div className="spec-grid">
-                {Object.entries(product.specifications).map(([key, value]) => (
-                  <div key={key} className="spec-item">
-                    <span className="spec-label">{key}</span>
-                    <span className="spec-value">{value}</span>
+              {/* Price & Weight List */}
+              <div className="price-weight-section">
+                <h3>Packaging & Pricing</h3>
+                <div className="price-list">
+                  <div className="price-list-header">
+                    <span>Weight</span>
+                    <span>Price</span>
                   </div>
-                ))}
+                  <div className="price-list-item">
+                    <span className="weight">100 gm</span>
+                    <span className="price">₹299</span>
+                  </div>
+                  <div className="price-list-item">
+                    <span className="weight">250 gm</span>
+                    <span className="price">₹599</span>
+                  </div>
+                  <div className="price-list-item">
+                    <span className="weight">500 gm</span>
+                    <span className="price">₹1,099</span>
+                  </div>
+                  <div className="price-list-item">
+                    <span className="weight">1 Kg</span>
+                    <span className="price">₹1,999</span>
+                  </div>
+                </div>
               </div>
+
+              {/* Benefits Section */}
+              <div className="benefits-section">
+                <h3>Key Benefits</h3>
+                <div className="benefits-list">
+                  {benefits.map((benefit, index) => (
+                    <div className="benefit-item" key={index}>
+                      <span className="benefit-icon">✓</span>
+                      <span className="benefit-text">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
 
-            {/* CTA Buttons */}
+            {/* Action Buttons */}
             <div className="product-actions">
               <NavLink to="/contact" className="btn btn-primary">
                 Request a Quote

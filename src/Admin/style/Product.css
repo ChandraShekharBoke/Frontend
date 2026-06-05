@@ -1,0 +1,120 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.table-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-soft);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.status.active {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.edit-btn {
+  background: var(--light-green);
+  border: none;
+  padding: 6px 12px;
+  margin-right: 5px;
+  border-radius: var(--radius-small);
+}
+
+.delete-btn {
+  background: #ffcdd2;
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-small);
+}
+.admin-products {
+  padding: 20px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.product-form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.product-form-card form {
+  display: grid;
+  gap: 15px;
+}
+
+.product-form-card input,
+.product-form-card select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.image-preview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.image-preview img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.form-buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #ccc;
+}

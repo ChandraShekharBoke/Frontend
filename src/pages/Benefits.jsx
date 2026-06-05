@@ -70,7 +70,6 @@ const Benefits = () => {
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );

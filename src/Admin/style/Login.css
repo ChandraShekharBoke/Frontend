@@ -1,0 +1,231 @@
+/* src/pages/Login.css */
+
+/* ===============================
+   THEME VARIABLES (Extracted)
+================================ */
+:root {
+  --primary-green: #2e7d32;
+  --dark-green: #1b5e20;
+  --light-green: #a5d6a7;
+  --accent-yellow: #f9a825;
+  --heading-dark: #1f2d3d;
+  --light-bg: #f5f7f6;
+  --white: #ffffff;
+  --border-color: #e0e0e0;
+  --error-red: #d32f2f;
+
+  --radius-large: 20px;
+  --radius-medium: 12px;
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --transition: 0.3s ease;
+  --font-main: "Poppins", "Inter", sans-serif;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--light-green)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-main);
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--white);
+  padding: 40px 35px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-soft);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===============================
+   LOGO
+================================ */
+.logo-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  background: var(--primary-green);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.logo-area h2 {
+  font-size: 18px;
+  color: var(--dark-green);
+}
+
+/* ===============================
+   TEXT
+================================ */
+.login-title {
+  text-align: center;
+  color: var(--heading-dark);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* ===============================
+   FORM
+================================ */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+  color: var(--heading-dark);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-medium);
+  border: 1px solid var(--border-color);
+  outline: none;
+  transition: var(--transition);
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+.error-input {
+  border-color: var(--error-red);
+}
+
+.error-text {
+  color: var(--error-red);
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* ===============================
+   PASSWORD
+================================ */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--primary-green);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===============================
+   OPTIONS
+================================ */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.remember-me input {
+  margin-right: 6px;
+}
+
+.forgot-link {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: var(--primary-green);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-btn:hover {
+  background: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+.login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+}

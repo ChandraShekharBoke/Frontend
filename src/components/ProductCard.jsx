@@ -6,8 +6,9 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
   const handleViewDetails = () => {
-    // Navigate to product detail page using product id
-    navigate(`/products/${product.id}`);
+    navigate(`/products/${product.id}`, {
+      state: { product },
+    });
   };
 
   return (
@@ -30,7 +31,6 @@ const ProductCard = ({ product }) => {
           type="button"
           className="product-button"
           onClick={handleViewDetails}
-          aria-label={`View details of ${product.name}`}
         >
           View Details
         </button>
